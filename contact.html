@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | AI QA Agency</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #222; }
+    nav, header, section, footer { max-width: 900px; margin: auto; padding: 40px 20px; }
+    nav { background: #eee; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #222; }
+    nav a[href="contact.html"] { font-weight: bold; }
+    h1, h2 { color: #1d1d1f; }
+    label { display: block; margin: 12px 0 4px; font-weight: bold; }
+    input, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 20px; padding: 10px 20px; background: #222; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #000; }
+    footer { text-align: center; font-size: 0.9em; color: #666; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="clients.html">Clients</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Resources</a>
+  </nav>
+  <header>
+    <h1>Contact Us</h1>
+    <h2>Let’s talk about your AI</h2>
+  </header>
+  <section>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+      
+      <label for="email">Email</label>
+      <input type="email" name="_replyto" id="email" required />
+      
+      <label for="message">Project Brief or Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <p>You can also reach us at <a href="mailto:hello@aiqa.agency">hello@aiqa.agency</a></p>
+  </section>
+  <footer>
+    &copy; 2025 AI QA Agency. All rights reserved.
+  </footer>
+</body>
+</html>
