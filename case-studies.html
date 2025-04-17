@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies | AI QA Agency</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    header, section, footer {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #1d1d1f;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #222; }
+    nav, header, section, footer { max-width: 900px; margin: auto; padding: 40px 20px; }
+    nav { background: #eee; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #222; }
+    nav a[href="case-studies.html"] { font-weight: bold; }
+    h1, h2, h3 { color: #1d1d1f; }
     .cta {
       display: inline-block;
       margin-top: 20px;
@@ -31,25 +20,29 @@
       text-decoration: none;
       border-radius: 6px;
     }
-    nav {
-      background-color:#eee;
-      padding:10px 20px;
-      text-align:center;
-    }
-    nav a {
-      margin:0 10px;
-      text-decoration:none;
-      color:#222;
-    }
-    nav a[href="case-studies.html"] {
-      font-weight: bold;
-    }
-    footer {
+    .filter-bar {
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
+      margin-bottom: 30px;
     }
+    .filter-bar select {
+      margin: 0 10px;
+      padding: 8px;
+    }
+    .case-study { display: block; margin-bottom: 60px; }
+    footer { text-align: center; font-size: 0.9em; color: #666; }
   </style>
+  <script>
+    function filterCases() {
+      const industry = document.getElementById('industry-filter').value;
+      const useCase = document.getElementById('usecase-filter').value;
+      const elements = document.querySelectorAll('.case-study');
+      elements.forEach(el => {
+        const matchesIndustry = industry === 'All' || el.dataset.industry === industry;
+        const matchesUseCase = useCase === 'All' || el.dataset.usecase === useCase;
+        el.style.display = (matchesIndustry && matchesUseCase) ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -67,29 +60,30 @@
     <h3><em>Real AI. Real issues. Real results.</em></h3>
   </header>
 
-  <section>
-    <h2>Client X — Conversational Clarity</h2>
-    <p><strong>Challenge:</strong> The chatbot struggled to handle user frustration and ambiguous travel questions.</p>
-    <p><strong>What we did:</strong> We ran 40+ real-user scenarios with contextual variations and tested how the bot managed tone, redirection, and escalation.</p>
-    <p><strong>Result:</strong> Improved flow in 3 critical decision paths, plus a 25% reduction in user-reported confusion.</p>
-  </section>
+  <div class="filter-bar">
+    <label>Industry:</label>
+    <select id="industry-filter" onchange="filterCases()">
+      <option>All</option>
+      <option>Retail</option>
+      <option>Healthcare</option>
+      <option>Finance</option>
+      <option>Education</option>
+    </select>
+    <label>Use Case:</label>
+    <select id="usecase-filter" onchange="filterCases()">
+      <option>All</option>
+      <option>Chatbots</option>
+      <option>Sentiment Analysis</option>
+      <option>Personalization</option>
+      <option>Automation</option>
+    </select>
+  </div>
 
-  <section>
-    <h2>Client X — Tone, Trust & Recovery</h2>
-    <p><strong>Challenge:</strong> The event assistant occasionally provided outdated information or offered options that didn’t match the user's criteria.</p>
-    <p><strong>What we did:</strong> We simulated edge-case queries and goal-driven flows, measuring alignment with intended outcomes.</p>
-    <p><strong>Result:</strong> Enhanced fallback strategy and greater consistency in personalized suggestions.</p>
-  </section>
-
-  <section>
-    <h2>Startup X — Ethical Filters under Fire</h2>
-    <p><strong>Challenge:</strong> Their AI mentor was vulnerable to inappropriate or manipulative prompts.</p>
-    <p><strong>What we did:</strong> Designed adversarial test sets targeting system boundaries, ethics compliance, and brand tone resilience.</p>
-    <p><strong>Result:</strong> Identified 8 critical risk zones and delivered actionable fixes with test cases to prevent regression.</p>
-  </section>
-
-  <section>
-    <p><a href="contact.html" class="cta">Request a similar audit</a></p>
+  <section class="case-study" data-industry="Retail" data-usecase="Chatbots">
+    <h2>Retail & E-commerce – Chatbots & Virtual Assistants</h2>
+    <h3>AI-powered product assistant: ensuring trust and consistency</h3>
+    <p>Retail brands increasingly rely on conversational AI to drive product discovery, support decisions, and personalize shopping journeys. But as bots get smarter, the room for silent failure grows: unclear tone, inconsistent memory, or broken upsell logic can quietly damage conversion and trust.</p>
+    <p><a href="case-studies/case-retail-chatbot-one-time.html" class="cta">Read full case</a></p>
   </section>
 
   <footer>
