@@ -28,7 +28,10 @@
       margin: 0 10px;
       padding: 8px;
     }
-    .case-study { display: block; margin-bottom: 60px; }
+    .case-study { display: block; margin-bottom: 60px; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: 0.3s ease; }
+    .case-study:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .case-study h2 { margin-top: 0; }
+    .case-study p { margin-bottom: 12px; }
     footer { text-align: center; font-size: 0.9em; color: #666; }
   </style>
   <script>
@@ -48,6 +51,8 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
+    <a href="use-cases.html">AI Use Cases</a>
+    <a href="industries.html">Industries</a>
     <a href="case-studies.html">Case Studies</a>
     <a href="clients.html">Clients</a>
     <a href="about.html">About</a>
@@ -64,10 +69,12 @@
     <label>Industry:</label>
     <select id="industry-filter" onchange="filterCases()">
       <option>All</option>
-      <option>Retail</option>
+      <option>Retail & E-commerce</option>
       <option>Healthcare</option>
       <option>Finance</option>
       <option>Education</option>
+      <option>Entertainment & Media</option>
+      <option>Travel & Tourism</option>
     </select>
     <label>Use Case:</label>
     <select id="usecase-filter" onchange="filterCases()">
@@ -79,16 +86,37 @@
     </select>
   </div>
 
-  <section class="case-study" data-industry="Retail" data-usecase="Chatbots">
-    <h2>Retail & E-commerce – Chatbots & Virtual Assistants</h2>
-    <h3>AI-powered product assistant: ensuring trust and consistency</h3>
-    <p>Retail brands increasingly rely on conversational AI to drive product discovery, support decisions, and personalize shopping journeys. But as bots get smarter, the room for silent failure grows: unclear tone, inconsistent memory, or broken upsell logic can quietly damage conversion and trust.</p>
-    <p><strong>Available packages:</strong></p>
-    <ul>
-      <li><a href="case-studies/case-retail-chatbot-one-time.html">One-time QA Audit ($3K)</a></li>
-      <li><a href="case-studies/case-retail-chatbot-ongoing.html">Ongoing Iterative Testing ($2.5K–4K/mo)</a></li>
-      <li><a href="case-studies/case-retail-chatbot-fullcycle.html">Full development cycle ($4K–8K/mo)</a></li>
-    </ul>
+  <section class="case-study" data-industry="Retail & E-commerce" data-usecase="Chatbots" data-package="One-Time QA Audit">
+  <h2>AI Chatbot QA for E-commerce</h2>
+  <h3>Industry: Retail & E-commerce · Use Case: Chatbots & Assistants · Package: One-Time QA Audit ($3K)</h3>
+
+  <p>The client, a growing online fashion retailer, requested a pre-launch audit of their shopping assistant. Our team tested core interaction flows, audited prompt logic, and delivered a ready-to-run automation test suite.</p>
+
+  <p><strong>Key result:</strong> +21% product clicks and –14% drop-offs after fixes.</p>
+
+  <p><a href="case-studies/case-retail-chatbot-one-time.html" class="cta">Read full case</a></p>
+</section>
+
+  <section class="case-study" data-industry="Entertainment & Media" data-usecase="Personalization" data-package="Continuous QA">
+    <h2>Testing personalization logic at scale</h2>
+    <h3>Industry: Entertainment & Media · Use Case: Personalization · Package: Continuous QA ($2.5K–4K/mo)</h3>
+
+    <p>A large B2C event platform uses AI to recommend relevant events based on user behavior, time, location, and mood. We continuously validated dynamic logic as their event catalog and recommendation models evolved weekly.</p>
+
+    <p><strong>Key result:</strong> weekly misalignment rate dropped from 17% to 3% in 2 months.</p>
+
+    <p><a href="case-studies/case-entertainment-personalization-continuous.html" class="cta">Read full case</a></p>
+  </section>
+
+  <section class="case-study" data-industry="Travel & Tourism" data-usecase="Automation" data-package="Custom Plan">
+    <h2>Scaling visa workflows with automation QA</h2>
+    <h3>Industry: Travel & Tourism · Use Case: Automation · Package: Custom Plan</h3>
+
+    <p>A global travel platform uses AI to assist users through complex multi-country visa requirements. We built custom tests to simulate dynamic application scenarios and verify adaptive logic based on nationality, trip purpose, and destination rules.</p>
+
+    <p><strong>Key result:</strong> end-to-end form coverage increased from 68% to 98% within 3 weeks of automation rollout.</p>
+
+    <p><a href="case-studies/case-travel-automation-custom.html" class="cta">Read full case</a></p>
   </section>
 
   <footer>

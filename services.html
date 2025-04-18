@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | AI QA Agency</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    header, section, footer {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #1d1d1f;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #222; }
+    nav, header, section, footer { max-width: 900px; margin: auto; padding: 40px 20px; }
+    nav { background: #eee; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #222; }
+    nav a[href="services.html"] { font-weight: bold; }
+    h1, h2, h3 { color: #1d1d1f; }
+    .package { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 24px; margin-bottom: 40px; }
+    .package h3 { margin-top: 0; }
+    .package ul { padding-left: 20px; }
     .cta {
       display: inline-block;
       margin-top: 20px;
@@ -31,33 +23,15 @@
       text-decoration: none;
       border-radius: 6px;
     }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #666;
-    }
-    nav {
-      background-color:#eee;
-      padding:10px 20px;
-      text-align:center;
-    }
-    nav a {
-      margin:0 10px;
-      text-decoration:none;
-      color:#222;
-    }
-    nav a[href="services.html"] {
-      font-weight: bold;
-    }
+    footer { text-align: center; font-size: 0.9em; color: #666; }
   </style>
 </head>
 <body>
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
+    <a href="use-cases.html">AI Use Cases</a>
+    <a href="industries.html">Industries</a>
     <a href="case-studies.html">Case Studies</a>
     <a href="clients.html">Clients</a>
     <a href="about.html">About</a>
@@ -67,72 +41,50 @@
 
   <header>
     <h1>Our Services</h1>
-    <h3><em>Tailored QA for the age of artificial intelligence</em></h3>
+    <h3><em>Flexible QA plans for modern AI teams</em></h3>
   </header>
 
-  <section>
-    <h2>AI Interaction Testing</h2>
-    <p><strong>We simulate real users. But sharper.</strong></p>
+  <section class="package">
+    <h3>One-Time QA Audit ($3K)</h3>
     <ul>
-      <li>End-to-end chat flow validation</li>
-      <li>Handling of ambiguous or vague inputs</li>
-      <li>Multiple-step reasoning checks</li>
-      <li>Memory and context preservation</li>
-      <li>Tone and emotional alignment</li>
+      <li>Input/output testing for key interaction flows</li>
+      <li>Annotated journey map + tone/logic analysis</li>
+      <li>Prompt refinement recommendations</li>
+      <li>Automation-ready test suite</li>
     </ul>
+    <a href="contact.html" class="cta">Book an Audit</a>
   </section>
 
-  <section>
-    <h2>Behavioral Stress Testing</h2>
-    <p><strong>What happens when things go wrong?</strong></p>
+  <section class="package">
+    <h3>Continuous QA ($2.5K–4K/mo)</h3>
     <ul>
-      <li>Misuse scenarios and prompt injection</li>
-      <li>Repetitive loops, contradictions, hallucinations</li>
-      <li>Adversarial user behavior</li>
-      <li>Confidence vs correctness analysis</li>
-      <li>Failure recovery logic</li>
+      <li>Recurring scenario validation & weekly test cycles</li>
+      <li>Regression coverage for evolving prompts & flows</li>
+      <li>Monthly QA reporting and insights</li>
+      <li>Updated automation scripts included</li>
     </ul>
+    <a href="contact.html" class="cta">Start Monthly QA</a>
   </section>
 
-  <section>
-    <h2>Ethics & Safety Review</h2>
-    <p><strong>AI should be powerful — and responsible.</strong></p>
+  <section class="package">
+    <h3>Full Development Cycle ($4K–8K/mo)</h3>
     <ul>
-      <li>Response moderation</li>
-      <li>Brand and tone compliance</li>
-      <li>Sensitive content & escalation detection</li>
-      <li>Fairness, bias, and tone evaluation</li>
-      <li>GDPR/safety recommendations (non-legal)</li>
+      <li>AI assistant design, development, and validation</li>
+      <li>Prompt + fallback + escalation planning</li>
+      <li>Integrated QA per sprint</li>
+      <li>Ongoing automation & refinement</li>
     </ul>
+    <a href="contact.html" class="cta">Build with Us</a>
   </section>
 
-  <section>
-    <h2>Ongoing QA & Monitoring</h2>
-    <p><strong>Your AI evolves. So does our testing.</strong></p>
+  <section class="package">
+    <h3>Custom Plan</h3>
     <ul>
-      <li>Monthly QA audits</li>
-      <li>Change impact analysis</li>
-      <li>Automated regression testing</li>
-      <li>Slack / Notion / Trello integration for delivery</li>
-      <li>Team enablement & test handover (optional)</li>
+      <li>Tailored QA scope for your architecture & needs</li>
+      <li>Workflow-specific testing and custom artifacts</li>
+      <li>Cross-team collaboration and advisory</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>Custom Services</h2>
-    <p>Every AI system is different. We’re happy to co-design a QA strategy with your product and engineering leads.</p>
-  </section>
-
-  <section>
-    <h2>Deliverables</h2>
-    <ul>
-      <li>A full QA report (clear, structured, and client-ready)</li>
-      <li>Scenario breakdowns and key findings</li>
-      <li>Risk prioritization and suggested fixes</li>
-      <li>Optional reusable test sets or automation guides</li>
-      <li>A debrief session with your team (if desired)</li>
-    </ul>
-    <p><a href="#" class="cta">Book a free audit</a> or <a href="#" class="cta">Check our case studies</a></p>
+    <a href="contact.html" class="cta">Let's Talk</a>
   </section>
 
   <footer>
